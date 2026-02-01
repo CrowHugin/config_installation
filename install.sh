@@ -53,12 +53,12 @@ cp -r ./fonts ~/.local/share/fonts/
 fc-cache -fv
 
 #------homebrew------
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)" || echo "Homebrew is already installed, moving on ..."
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)" -y || echo "Homebrew is already installed, moving on ..."
 echo >> ~/.bashrc
 echo 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv bash)"' >> ~/.bashrc
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv bash)"
 
 #------atuin------
-brew install atuin -y || echo "atuin is already installed, moving on ..."
+brew install atuin || echo "atuin is already installed, moving on ..."
 
 echo "Done!"
