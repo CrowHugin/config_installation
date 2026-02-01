@@ -25,9 +25,8 @@ sudo apt-get install software-properties-common -y
 sudo add-apt-repository ppa:neovim-ppa/unstable -y
 sudo apt-get install neovim -y
 
-sudo apt-get install unzip -y
-sudo apt-get install npm -y
-
+sudo apt-get install unzip -y || echo "unzip is already installed, moving on ..."
+sudo apt-get install npm -y || echo "npm is already installed, moving on ..."
 echo "Installing fonts..."
 cp -r ./fonts ~/.local/share/fonts/
 fc-cache -fv
