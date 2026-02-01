@@ -52,13 +52,10 @@ echo "Installing fonts..."
 cp -r ./fonts ~/.local/share/fonts/
 fc-cache -fv
 
-#------homebrew------
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)" -y || echo "Homebrew is already installed, moving on ..."
-echo >> ~/.bashrc
-echo 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv bash)"' >> ~/.bashrc
-eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv bash)"
-
 #------atuin------
-brew install atuin || echo "atuin is already installed, moving on ..."
+curl --proto '=https' --tlsv1.2 -LsSf https://setup.atuin.sh | sh || echo "atuin is already installed, moving on ..."
+source $HOME/.atuin/bin/env (sh, bash, zsh)
+source $HOME/.atuin/bin/env.fish (fish)
+
 
 echo "Done!"
