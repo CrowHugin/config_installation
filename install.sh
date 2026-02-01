@@ -43,7 +43,7 @@ git clone https://github.com/CrowHugin/nvim-config ~/.config/nvim
 
 
 #------tmux------
-sudo apt-install tmux
+sudo apt-get install tmux
 git clone https://github.com/CrowHugin/tmux-config ~/.config/tmux/
 
 #------Nerd fonts------
