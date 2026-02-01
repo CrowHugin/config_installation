@@ -36,7 +36,8 @@ sudo apt-get install ca-certificates -y || echo "ca-certificates is already inst
 
 if [ -d "$NVIM_CONFIG" ]; then
   echo "An nvim config was detected, will be move to $NVIM_CONFIG.bak"
-  mv ~/.config/nvim ~/.config/nvim.bak
+  rm -rf $NVIM_CONFIG.bak
+  mv $NVIM_CONFIG $NVIM_CONFIG.bak
 fi
 
 git clone https://github.com/CrowHugin/nvim-config ~/.config/nvim
@@ -44,7 +45,7 @@ git clone https://github.com/CrowHugin/nvim-config ~/.config/nvim
 
 #------tmux------
 sudo apt-get install tmux -y
-git clone https://github.com/CrowHugin/tmux-config ~/.config/tmux/
+git clone https://github.com/CrowHugin/tmux-config ~/.config/tmux/ || echo "tmux is already installed, moving on ..."
 
 #------Nerd fonts------
 echo "Installing fonts..."
