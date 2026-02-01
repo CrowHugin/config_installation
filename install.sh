@@ -60,5 +60,10 @@ curl --proto '=https' --tlsv1.2 -LsSf https://setup.atuin.sh | sh || echo "atuin
 source $HOME/.atuin/bin/env (sh, bash, zsh)
 source $HOME/.atuin/bin/env.fish (fish)
 
+echo "Done !"
+echo "Cleaning ..."
+
+cd ../
+rm -rf ./config_installation/
 
 echo "Done!"
