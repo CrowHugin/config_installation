@@ -1,11 +1,12 @@
 
+
+
 ### fonts
-Please be sure to set your terminal policies to 0xProto Nerd Font.
+Please be sure to set your terminal font to 0xProto Nerd Font.
 
 ## tmux
 
 Use `Crtl-Space + I` inside tmux to load the plugins.
-
 
 To enter copy mode use `Ctrl-Space + [`
 
