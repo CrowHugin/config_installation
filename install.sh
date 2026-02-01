@@ -56,8 +56,7 @@ fc-cache -fv
 
 #------atuin------
 curl --proto '=https' --tlsv1.2 -LsSf https://setup.atuin.sh | sh || echo "atuin is already installed, moving on ..."
-source $HOME/.atuin/bin/env (sh, bash, zsh)
-source $HOME/.atuin/bin/env.fish (fish)
+source $HOME/.atuin/bin/env
 
 #------aliases------
 echo alias python=/bin/python3 >> .bash_aliases
