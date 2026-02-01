@@ -43,7 +43,7 @@ git clone https://github.com/CrowHugin/nvim-config ~/.config/nvim
 
 
 #------tmux------
-sudo apt-get install tmux
+sudo apt-get install tmux -y
 git clone https://github.com/CrowHugin/tmux-config ~/.config/tmux/
 
 #------Nerd fonts------
@@ -53,8 +53,11 @@ fc-cache -fv
 
 #------homebrew------
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)" || echo "Homebrew is already installed, moving on ..."
+echo >> ~/.bashrc
+echo 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv bash)"' >> ~/.bashrc
+eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv bash)"
 
 #------atuin------
-brew install atuin || echo "atuin is already installed, moving on ..."
+brew install atuin -y || echo "atuin is already installed, moving on ..."
 
 echo "Done!"
