@@ -1,5 +1,15 @@
 
+How to install my config:
 
+```bash
+git clone https://github.com/CrowHugin/config_installation && cd config_installation
+```
+
+Then:
+
+```bash
+chmod u+x ./install.sh && ./install.sh
+```
 
 ### fonts
 Please be sure to set your terminal font to 0xProto Nerd Font.
