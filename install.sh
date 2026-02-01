@@ -13,6 +13,13 @@ echo "Installing CrowHugin's config..."
 
 echo "Installing ..."
 
+install_if_missing() {
+    if ! command -v $1 &> /dev/null; then
+        echo "Installing $1..."
+        sudo apt-get install $1 -y
+    fi
+}
+
 sudo apt update 
 sudo apt-get install software-properties-common -y
 sudo add-apt-repository ppa:neovim-ppa/unstable -y
