@@ -29,8 +29,8 @@ sudo apt-get install unzip -y
 sudo apt-get install npm -y
 
 echo "Installing fonts..."
-git clone --depth 1 https://github.com/ryanoasis/nerd-fonts.git
-./install.sh 0xProto
+cp -r ./fonts ~/.local/share/fonts/
+fc-cache -fv
 
 
 if [ -d "$NVIM_CONFIG" ]; then
