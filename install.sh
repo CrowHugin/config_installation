@@ -47,7 +47,8 @@ git clone https://github.com/CrowHugin/nvim-config ~/.config/nvim
 sudo apt-get install tmux -y || echo ""
 rm -rf ~/.config/tmux
 git clone https://github.com/CrowHugin/tmux-config ~/.config/tmux/ || echo "tmux is already installed, moving on ..."
-tmux source-file ~/.config/tmux/tmux.conf
+git clone https://github.com/tmux-plugins/tpm ~/.config/tmux/.tmux/plugins/tpm || echo "tmux tmp id already installed, moving on ..."
+tmux source-file ~/.config/tmux/.tmux.conf
 
 #------Nerd fonts------
 echo "Installing fonts..."
