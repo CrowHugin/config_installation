@@ -1,5 +1,8 @@
 #!/bin/bash
 
+NVIM_CONFIG="$HOME/.config/nvim"
+
+
 # Arrêter le script en cas d'erreur
 set -e
 
@@ -22,7 +25,11 @@ apt-get install neovim -y
 apt-get install unzip -y
 apt-get install npm -y
 
-mv ~/.config/nvim ~/.config/nvim.bak
+if [-d "$NVIM_CONFIG"]; then
+  echo "An nvim config was detected, will be move to $NVIM_CONFIG.bak"
+  mv ~/.config/nvim ~/.config/nvim.bak
+fi
+
 git clone https://github.com/CrowHugin/nvim-config ~/.config/nvim
 
 echo "Done!"
