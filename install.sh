@@ -28,7 +28,7 @@ sudo apt-get install neovim -y
 sudo apt-get install unzip -y
 sudo apt-get install npm -y
 
-if [-d "$NVIM_CONFIG"]; then
+if [ -d "$NVIM_CONFIG" ]; then
   echo "An nvim config was detected, will be move to $NVIM_CONFIG.bak"
   mv ~/.config/nvim ~/.config/nvim.bak
 fi
