@@ -20,6 +20,7 @@ install_if_missing() {
     fi
 }
 
+#------nvim------
 sudo apt update 
 sudo apt-get install software-properties-common -y
 sudo add-apt-repository ppa:neovim-ppa/unstable -y
@@ -27,10 +28,11 @@ sudo apt-get install neovim -y
 
 sudo apt-get install unzip -y || echo "unzip is already installed, moving on ..."
 sudo apt-get install npm -y || echo "npm is already installed, moving on ..."
-echo "Installing fonts..."
-cp -r ./fonts ~/.local/share/fonts/
-fc-cache -fv
-
+sudo apt-get install gcc -y || echo "gcc is already install, moving on ..."
+sudo apt-get install make -y || echo "make is already install, moving on ..."
+sudo apt-get install curl -y || echo "curl is already install, moving on ..."
+sudo apt-get install python3 -y || echo "python3 is already install, moving on ..."
+sudo apt-get install ca-certificates -y || echo "ca-certificates is already install, moving on ..."
 
 if [ -d "$NVIM_CONFIG" ]; then
   echo "An nvim config was detected, will be move to $NVIM_CONFIG.bak"
@@ -38,5 +40,21 @@ if [ -d "$NVIM_CONFIG" ]; then
 fi
 
 git clone https://github.com/CrowHugin/nvim-config ~/.config/nvim
+
+
+#------tmux------
+sudo apt-install tmux
+git clone https://github.com/CrowHugin/tmux-config ~/.config/tmux/
+
+#------Nerd fonts------
+echo "Installing fonts..."
+cp -r ./fonts ~/.local/share/fonts/
+fc-cache -fv
+
+#------homebrew------
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)" || echo "Homebrew is already installed, moving on ..."
+
+#------atuin------
+brew install atuin || echo "atuin is already installed, moving on ..."
 
 echo "Done!"
