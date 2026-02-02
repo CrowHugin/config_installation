@@ -48,7 +48,7 @@ sudo apt-get install tmux -y || echo ""
 rm -rf ~/.config/tmux
 git clone https://github.com/CrowHugin/tmux-config ~/.config/tmux/ || echo "tmux is already installed, moving on ..."
 git clone https://github.com/tmux-plugins/tpm ~/.config/tmux/.tmux/plugins/tpm || echo "tmux tmp id already installed, moving on ..."
-cp ~/.config/tmux/.tmux ~/.config/tmux/.tmux ~/.config/tmux/.tmux.conf ~/ 
+cp -r ~/.config/tmux/.tmux ~/.config/tmux/.tmux.conf ~/ 
 rm -rf ~/.config/tmux
 
 #------Nerd fonts------
