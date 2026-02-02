@@ -63,9 +63,15 @@ source $HOME/.atuin/bin/env
 #------aliases------
 sudo apt-get install eza
 
-echo alias python=/bin/python3 >> ~/.bash_aliases
-echo alias lse='eza -lha --icons=auto --sort=name --group-directories-first' >> ~/.bash_aliases
-echo alias cl=clear >> ~/.bash_aliases
+
+if ! grep -qF "alias lse='eza -lha --icons=auto --sort=name --group-directories-first'" ~/.bash_aliases; then
+    echo -e "alias lse='eza -lha --icons=auto --sort=name --group-directories-first'" >> ~/.bash_aliases
+fi
+
+
+if ! grep -qF "alias cl=clear" ~/.bash_aliases; then
+    echo "alias cl=clear" >> ~/.bash_aliases
+fi
 
 source ~/.bashrc
 
