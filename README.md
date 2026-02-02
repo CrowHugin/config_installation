@@ -1,7 +1,7 @@
 
 ### informations
 
-You need to have apt installed for the script to work
+This script need `apt` package manager and `git` installed.
 
 ---
 ### instalation
@@ -33,20 +33,30 @@ Then use `v` to begin the selection,
 
 and `y` to copy inside the clipboard
 
-for tmux command see [here](https://tmuxcheatsheet.com/)
+For tmux command see [here](https://tmuxcheatsheet.com/)
+
+See the config [here](https://github.com/CrowHugin/tmux-config)
 
 ---
 ### Nvim
 
 Nvim treesitter will work after you launch nvim 2 or 3 times.
 
+See the config [here](https://github.com/CrowHugin/nvim-config)
+
 ---
 ### Aliases
 
-I added to more aliases:
+I added two more aliases:
 
 `lse` which is `eza -lha --icons=auto --sort=name --group-directories-first`
 
 for more info on eza see [here](https://github.com/eza-community/eza)
 
 and `cl` as a shortcut to `Ctrl-l` or `clear` because `Ctrl-l` is used to change windows on tmux.
+
+---
+### Atuin
+See info on atuin [here](https://atuin.sh/)
+
+For it to work, you need to restart your terminal.
