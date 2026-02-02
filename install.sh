@@ -45,7 +45,7 @@ git clone https://github.com/CrowHugin/nvim-config ~/.config/nvim
 
 #------tmux------
 sudo apt-get install tmux -y || echo ""
-rm -rf ~/.config/tmux
+rm -rf ~/.config/tmux ~/.tmux ~/.tmux.conf
 git clone https://github.com/CrowHugin/tmux-config ~/.config/tmux/ || echo "tmux is already installed, moving on ..."
 git clone https://github.com/tmux-plugins/tpm ~/.config/tmux/.tmux/plugins/tpm || echo "tmux tmp id already installed, moving on ..."
 cp -r ~/.config/tmux/.tmux ~/.config/tmux/.tmux.conf ~/ 
