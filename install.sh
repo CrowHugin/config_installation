@@ -89,7 +89,7 @@ fi
 echo "Done !"
 echo "Cleaning ..."
 
-cd ../
-rm -rf ./config_installation/
+cd ~/
+rm -rf ~/config_installation/
 
 echo "Done!"
