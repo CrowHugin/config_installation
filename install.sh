@@ -61,9 +61,9 @@ curl --proto '=https' --tlsv1.2 -LsSf https://setup.atuin.sh | sh || echo "atuin
 source $HOME/.atuin/bin/env
 
 #------aliases------
-echo alias python=/bin/python3 >> .bash_aliases
-echo alias lse='eza -lha --icons=auto --sort=name --group-directories-first' >> .bash_aliases
-echo alias cl=clear >> .bash_aliases
+echo alias python=/bin/python3 >> ~/.bash_aliases
+echo alias lse='eza -lha --icons=auto --sort=name --group-directories-first' >> ~/.bash_aliases
+echo alias cl=clear >> ~/.bash_aliases
 
 BLOCK='if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
