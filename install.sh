@@ -2,15 +2,9 @@
 
 NVIM_CONFIG="$HOME/.config/nvim"
 
-
 # Arrêter le script en cas d'erreur
 set -e
-
-
 echo "Installing CrowHugin's config..."
-
-
-
 echo "Installing ..."
 
 install_if_missing() {
